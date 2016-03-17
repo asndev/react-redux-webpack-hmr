@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { fetchEntity } from '../actions';
 
+import Title from 'components/Title';
+
 class App extends Component {
   onButtonClick() {
     this.props.dispatch(fetchEntity());
@@ -10,7 +12,7 @@ class App extends Component {
     const { receivedAt } = this.props;
     return (
       <div>
-          <h3>Container</h3>
+          <Title value={'Foobar'} />
           <button onClick={this.onButtonClick.bind(this)}>
             Click
           </button>
