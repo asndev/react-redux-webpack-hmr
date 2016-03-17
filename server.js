@@ -1,10 +1,11 @@
 import webpack from 'webpack';
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
-const config = require('./webpack.config');
+import configBuilder, { DEV_ENV } from './webpack.config';
 
 const app = new (require('express'))();
 const port = 3000;
+const config = configBuilder(DEV_ENV);
 
 const compiler = webpack(config);
 
