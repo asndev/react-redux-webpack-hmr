@@ -4,7 +4,7 @@ function receiveEntity() {
   return {
     type: SOME_ACTION,
     receivedAt: Date.now()
-  }
+  };
 }
 
 export function fetchEntity() {
@@ -13,5 +13,5 @@ export function fetchEntity() {
     return setTimeout(() => {
       dispatch(receiveEntity());
     }, 1000);
-  }
+  };
 }

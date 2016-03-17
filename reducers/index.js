@@ -8,14 +8,14 @@ function entities(state = {}, action) {
     case SOME_ACTION:
       return Object.assign({}, state, {
           receivedAt: action.receivedAt
-      })
+      });
     default:
-      return state
+      return state;
   }
 }
 
 const rootReducer = combineReducers({
   entities
-})
+});
 
-export default rootReducer
+export default rootReducer;

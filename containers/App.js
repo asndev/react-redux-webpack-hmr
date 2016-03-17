@@ -7,7 +7,7 @@ class App extends Component {
     this.props.dispatch(fetchEntity());
   }
   render() {
-    const { receivedAt } = this.props
+    const { receivedAt } = this.props;
     return (
       <div>
           <button onClick={this.onButtonClick.bind(this)}>
@@ -20,22 +20,22 @@ class App extends Component {
             </span>
           }
       </div>
-    )
+    );
   }
 }
 
 App.propTypes = {
   receivedAt: PropTypes.number,
   dispatch: PropTypes.func.isRequired
-}
+};
 
 function mapStateToProps(state) {
-  const { entities } = state
+  const { entities } = state;
   const { receivedAt } = entities;
 
   return {
     receivedAt
-  }
+  };
 }
 
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps)(App);
