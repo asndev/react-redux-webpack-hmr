@@ -10,6 +10,7 @@ class App extends Component {
     const { receivedAt } = this.props;
     return (
       <div>
+          <h3>Container</h3>
           <button onClick={this.onButtonClick.bind(this)}>
             Click
           </button>

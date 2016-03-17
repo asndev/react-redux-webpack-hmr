@@ -8,36 +8,38 @@ const store = configureStore();
 const rootEl = document.getElementById('root');
 
 let render = () => {
-  const App = require('./containers/App').default
+  const App = require('./containers/App').default;
   ReactDOM.render(
     <Provider store={store}>
       <App />
     </Provider>,
     rootEl
   );
-}
+};
 
 if (module.hot) {
   // Support hot reloading of components
   // and display an overlay for runtime errors
-  const renderApp = render
+  const renderApp = render;
   const renderError = (error) => {
-    const RedBox = require('redbox-react')
+    const RedBox = require('redbox-react');
     ReactDOM.render(
       <RedBox error={error} />,
       rootEl
-    )
-  }
+    );
+  };
+
   render = () => {
     try {
-      renderApp()
+      renderApp();
     } catch (error) {
-      renderError(error)
+      renderError(error);
     }
-  }
+  };
+
   module.hot.accept('./containers/App', () => {
-    setTimeout(render)
-  })
+    setTimeout(render);
+  });
 }
 
-render()
+render();
