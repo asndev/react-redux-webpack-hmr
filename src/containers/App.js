@@ -20,7 +20,7 @@ class App extends Component {
           </ul>
           <Title value={'Foobar'} />
           <button onClick={this.onButtonClick.bind(this)}>
-            Click
+            Click.
           </button>
           Last Timestamp:
           {receivedAt &&

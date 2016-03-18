@@ -41,9 +41,10 @@ if (module.hot) {
     }
   };
 
-  module.hot.accept('./containers/App', () => {
-    setTimeout(render);
-  });
+  // Commented while using babel-preset-transform-hmre
+  // module.hot.accept('./containers/App', () => {
+  //   setTimeout(render);
+  // });
 }
 
 render();
